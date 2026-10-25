@@ -1,0 +1,34 @@
+{
+  "name": "pi-mcp-events-status",
+  "version": "0.1.0",
+  "description": "Pi extension that shows how many MCP event subscriptions are live.",
+  "license": "MIT",
+  "author": "naqerl <scipunch@gmail.com>",
+  "keywords": ["pi-package", "mcp", "events"],
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naqerl/pi-mcp-events-status.git"
+  },
+  "homepage": "https://github.com/naqerl/pi-mcp-events-status#readme",
+  "bugs": {
+    "url": "https://github.com/naqerl/pi-mcp-events-status/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "pi": {
+    "extensions": ["./extensions/mcp-events-status.ts"]
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/state.test.ts"
+  }
+}
