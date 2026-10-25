@@ -54,6 +54,17 @@ test("catalog and other tools do not change the set", () => {
   assert.deepEqual([...ids], ["s1"]);
 });
 
+test("a status batch keeps the last state when one subscription appears twice", () => {
+  const ids = new Set<string>();
+  applyStatusSubscriptions(ids, [
+    live("s1", "active"),
+    live("s1", "ended"),
+    live("s2", "ended"),
+    live("s2", "reconnecting"),
+  ]);
+  assert.deepEqual([...ids], ["s2"]);
+});
+
 test("status messages add reconnecting subscriptions and drop dead ones", () => {
   const ids = new Set(["s1", "s2"]);
   applyStatusSubscriptions(ids, [

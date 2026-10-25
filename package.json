@@ -25,6 +25,11 @@
       "optional": true
     }
   },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
   "pi": {
     "extensions": ["./extensions/mcp-events-status.ts"]
   },
