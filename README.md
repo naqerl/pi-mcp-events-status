@@ -9,14 +9,10 @@ The label is `MCP events: N subs`. N counts subscriptions that are opening, acti
 This package does not install Pi MCP Events. Install that companion first, then:
 
 ```sh
-pi install npm:pi-mcp-events-status
-```
-
-The same package is also available from git:
-
-```sh
 pi install git:github.com/naqerl/pi-mcp-events-status
 ```
+
+The package has not been published to npm; install it from git.
 
 Restart Pi.
 
